@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cgdhtsqf7dabe" path="res://Player/placeholder.png" id="2_pq514"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sf8u8"]
-size = Vector2(24, 26)
+size = Vector2(16, 15)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_lxed6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_sf8u8")
 debug_color = Color(0.803922, 0.290196, 0.752941, 0.478431)
 
