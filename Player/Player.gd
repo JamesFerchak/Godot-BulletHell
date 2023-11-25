@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var sprite : Sprite2D = $Sprite2D
-
+var fball = GameplayLogic.fire_collected
 const SPEED = 200.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

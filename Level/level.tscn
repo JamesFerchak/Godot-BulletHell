@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://be7kvua85volf"]
+[gd_scene load_steps=6 format=3 uid="uid://be7kvua85volf"]
 
 [ext_resource type="PackedScene" uid="uid://b6qiwhmmq2rvy" path="res://Player/Player.tscn" id="1_1207h"]
+[ext_resource type="Script" path="res://Level/GameplayLogic.gd" id="1_mqaju"]
 [ext_resource type="Texture2D" uid="uid://b7ny8iyako2yq" path="res://Level/ArcadeBorder.png" id="2_viujk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2ijk"]
@@ -427,6 +428,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_t2ijk")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_mqaju")
 
 [node name="Player" parent="." instance=ExtResource("1_1207h")]
 collision_mask = 2
