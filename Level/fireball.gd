@@ -1,13 +1,12 @@
 extends Area2D
 
-var xrng = RandomNumberGenerator.new()
 var yrng = RandomNumberGenerator.new()
 var xvelocity
 var yvelocity
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	xvelocity = xrng.randf_range(-800.0,800.0)
-	yvelocity = yrng.randf_range(-800.0,800.0)
+	xvelocity = 150
+	yvelocity = yrng.randf_range(-50.0,50.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,8 +14,8 @@ func _process(delta):
 	position += transform.x * xvelocity * delta
 	position += transform.y * yvelocity * delta
 
-func assignspeed(x1,x2,y1,y2):
-	xvelocity = xrng.randf_range(x1,x2)
+func assignspeed(x,y1,y2):
+	xvelocity = x
 	yvelocity = yrng.randf_range(y1,y2)
 
 
@@ -30,3 +29,7 @@ func _on_body_entered(body):
 	queue_free()
 	
 
+
+
+func _on_destroy_timer_timeout():
+	queue_free()
