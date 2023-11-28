@@ -5,8 +5,7 @@ var xvelocity
 var yvelocity
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	xvelocity = 150
-	yvelocity = yrng.randf_range(-50.0,50.0)
+	assignspeed(GameplayLogic.bulletspeedx, GameplayLogic.bulletspeedy1, GameplayLogic.bulletspeedy2)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

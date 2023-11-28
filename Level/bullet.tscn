@@ -6,16 +6,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in5gc"]
 
 [node name="Bullet" type="Area2D"]
+show_behind_parent = true
 script = ExtResource("1_v0fmv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_in5gc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+show_behind_parent = true
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_4e0bg")
 
 [node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 autostart = true
 

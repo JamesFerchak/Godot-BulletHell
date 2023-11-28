@@ -6,8 +6,7 @@ var score
 var health = 3;
 var fire_collected
 var fire 
-var bulletspeedx1
-var bulletspeedx2
+var bulletspeedx
 var bulletspeedy1
 var bulletspeedy2
 # Called when the node enters the scene tree for the first time.

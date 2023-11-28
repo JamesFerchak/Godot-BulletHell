@@ -22,6 +22,8 @@ var marker_number
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pause_menu.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	GameplayLogic.bulletspeedx = 150
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,20 +50,36 @@ func _on_bullet_spawn_timer_timeout():
 	pass # Replace with function body.
 
 func spawnbullet(num):
-	var b = bullet.instantiate()
-	bullet_holder.add_child(b)
-	print_debug("Bullet Spawned")
 	match num:
 		1:
+			GameplayLogic.bulletspeedy1 = 60
+			GameplayLogic.bulletspeedy2 = 130
+			var b = bullet.instantiate()
+			bullet_holder.add_child(b)
 			b.position = left_marker_1.global_position
-			b.call()
 		2:
+			GameplayLogic.bulletspeedy1 = 20
+			GameplayLogic.bulletspeedy2 = 80
+			var b = bullet.instantiate()
+			bullet_holder.add_child(b)
 			b.position = left_marker_2.global_position
 		3:
+			GameplayLogic.bulletspeedy1 = -25
+			GameplayLogic.bulletspeedy2 = 25
+			var b = bullet.instantiate()
+			bullet_holder.add_child(b)
 			b.position = left_marker_3.global_position
 		4:
+			GameplayLogic.bulletspeedy1 = -80
+			GameplayLogic.bulletspeedy2 = -20
+			var b = bullet.instantiate()
+			bullet_holder.add_child(b)
 			b.position = left_marker_4.global_position
 		5:
+			GameplayLogic.bulletspeedy1 = -130
+			GameplayLogic.bulletspeedy2 = -60
+			var b = bullet.instantiate()
+			bullet_holder.add_child(b)
 			b.position = left_marker_5.global_position
 	
 	pass
