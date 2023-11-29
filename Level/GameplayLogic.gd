@@ -1,11 +1,10 @@
 extends Node2D
 
 #general game variables
-var timer
-var score
+var timer = 0
+var score = 0
 var health = 3;
-var fire_collected
-var fire 
+var fire_collected = 0
 var bulletspeedx
 var bulletspeedy1
 var bulletspeedy2

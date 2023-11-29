@@ -20,7 +20,8 @@ func assignspeed(x,y1,y2):
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		GameplayLogic.fire_collected += 1;
+		GameplayLogic.fire_collected += 1
+		GameplayLogic.score += 100
 		pass
 	if body.is_in_group("tree"):
 		GameplayLogic.health -= 1
