@@ -1,4 +1,5 @@
 extends Node2D
+
 #Bullet Reference
 @onready var bullet_holder : Node = $BulletHolder
 var bullet = preload("res://Level/bullet.tscn")
@@ -29,10 +30,13 @@ func _ready():
 	pause_menu.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	GameplayLogic.bulletspeedx = 150
 	GameplayLogic.score = 0
+	GameplayLogic.timer = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	GameplayLogic.timer += delta
+	
 	if Input.is_action_just_pressed("PAUSE"):
 		get_tree().paused = true
 		pause_menu.show()

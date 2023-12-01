@@ -1,21 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://djsp4ii1geja8"]
 
-[ext_resource type="Texture2D" uid="uid://brdgg4se0q4yy" path="res://icon.svg" id="1_4e0bg"]
 [ext_resource type="Script" path="res://Level/fireball.gd" id="1_v0fmv"]
+[ext_resource type="Texture2D" uid="uid://c6mhbt6k5g3cr" path="res://Level/Fireball.png" id="2_kxoju"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in5gc"]
+size = Vector2(37, 31)
 
 [node name="Bullet" type="Area2D"]
-show_behind_parent = true
+top_level = true
 script = ExtResource("1_v0fmv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_in5gc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_4e0bg")
+scale = Vector2(2, 2)
+texture = ExtResource("2_kxoju")
 
 [node name="DestroyTimer" type="Timer" parent="."]
 wait_time = 5.0
