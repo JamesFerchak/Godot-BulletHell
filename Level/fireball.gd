@@ -3,6 +3,7 @@ extends Area2D
 var yrng = RandomNumberGenerator.new()
 var xvelocity
 var yvelocity
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	assignspeed(GameplayLogic.bulletspeedx, GameplayLogic.bulletspeedy1, GameplayLogic.bulletspeedy2)
@@ -12,6 +13,7 @@ func _ready():
 func _process(delta):
 	position += transform.x * xvelocity * delta
 	position += transform.y * yvelocity * delta
+	
 
 func assignspeed(x,y1,y2):
 	xvelocity = x

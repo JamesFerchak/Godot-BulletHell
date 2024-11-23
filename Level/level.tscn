@@ -443,7 +443,7 @@ script = ExtResource("1_ryrb4")
 
 [node name="Player" parent="." instance=ExtResource("1_1207h")]
 top_level = true
-position = Vector2(0, 30)
+position = Vector2(0, 92)
 collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
